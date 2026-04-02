@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors - The Cinematic Nocturne */
+  --surface: #001524;
+  --surface-dim: #001524;
+  --surface-container-lowest: #00101c;
+  --surface-container-low: #001e31;
+  --surface-container: #002237;
+  --surface-container-high: #022d46;
+  --surface-container-highest: #123851;
+  
+  --primary: #c6c6c7;
+  --on-primary: #2f3131;
+  --primary-container: #272929;
+  --on-primary-container: #8e9090;
+  
+  --on-surface: #cce5ff;
+  --on-surface-variant: #c2c7ce;
+  --outline: #8c9197;
+  --outline-variant: #42474d;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-headline {
+  font-family: var(--font-instrument-serif), serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Reset and Core Elements */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* The Cinematic Nocturne overrides for Bootstrap */
+.container {
+  /* No line rule */
+  border: none !important;
+}
+
+/* Override Bootstrap Defaults */
+body, .bg-light, .bg-dark {
+  background-color: var(--surface) !important;
+}
+
+body, .text-dark, .text-muted {
+  color: var(--on-surface) !important;
+}
+
+/* Removing Bootstrap outlines and focus rings */
+*:focus,
+.btn:focus,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--primary) !important;
+}
+
+.btn {
+  border-radius: 9999px !important; /* rounded-full */
+}
+
+/* Base Shadow/Glow Rules */
+.glow-primary-hover:hover {
+  box-shadow: 0 0 15px rgba(198, 198, 199, 0.3) !important;
+}
+
+/* Liquid Glass effect */
+.liquid-glass {
+  background: rgba(18, 56, 81, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.cinematic-pill {
+  background: rgba(0, 21, 36, 0.5); /* surface 50% */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 40px 60px -15px rgba(0, 16, 28, 0.6);
+  border-radius: 9999px;
+}
+
+/* No Line Rule - explicitly removing default borders */
+.no-line, .card, .list-group-item {
+  border: none !important;
+}

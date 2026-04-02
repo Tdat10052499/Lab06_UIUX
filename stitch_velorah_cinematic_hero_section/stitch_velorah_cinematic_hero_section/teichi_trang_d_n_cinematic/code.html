@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dự án | Teichi Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#c2c7ce",
+                        "surface-container-high": "#022d46",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#272929",
+                        "secondary-container": "#2a4c67",
+                        "on-secondary": "#0c334d",
+                        "on-secondary-fixed": "#001e31",
+                        "surface-container-highest": "#123851",
+                        "inverse-primary": "#5d5f5f",
+                        "tertiary-fixed": "#e1e2ea",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-secondary-container": "#9abcdb",
+                        "background": "#001524",
+                        "tertiary-container": "#25282e",
+                        "secondary": "#a8caea",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#8d8f97",
+                        "tertiary": "#c4c6ce",
+                        "surface": "#001524",
+                        "outline-variant": "#42474d",
+                        "surface-container": "#002237",
+                        "on-tertiary-fixed-variant": "#44474d",
+                        "surface-variant": "#123851",
+                        "on-background": "#cce5ff",
+                        "surface-dim": "#001524",
+                        "on-error": "#690005",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c4c6ce",
+                        "primary": "#c6c6c7",
+                        "secondary-fixed": "#cce5ff",
+                        "surface-tint": "#c6c6c7",
+                        "on-primary": "#2f3131",
+                        "inverse-surface": "#cce5ff",
+                        "surface-bright": "#183c56",
+                        "error-container": "#93000a",
+                        "outline": "#8c9197",
+                        "on-tertiary-fixed": "#191c22",
+                        "on-secondary-fixed-variant": "#274a64",
+                        "on-surface": "#cce5ff",
+                        "inverse-on-surface": "#0c334d",
+                        "on-primary-container": "#8e9090",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#a8caea",
+                        "on-tertiary": "#2d3037",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#001e31",
+                        "surface-container-lowest": "#00101c"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "serif": ["Instrument Serif", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #cce5ff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(18, 56, 81, 0.1);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% -20%, rgba(198, 198, 199, 0.08) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-16 w-full">
+<div class="rounded-full max-w-[1000px] mx-auto mt-6 w-full bg-[#001524]/50 backdrop-blur-[24px] flex items-center justify-between px-8 py-3 shadow-2xl shadow-[#00101c]/60 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
+<div class="text-2xl font-serif italic text-white tracking-tighter">Teichi</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-400 font-sans text-sm tracking-wide hover:text-white hover:scale-105 transition-all duration-300" href="#">Trang chủ</a>
+<a class="text-slate-400 font-sans text-sm tracking-wide hover:text-white hover:scale-105 transition-all duration-300" href="#">Giới thiệu</a>
+<a class="text-slate-400 font-sans text-sm tracking-wide hover:text-white hover:scale-105 transition-all duration-300" href="#">Kỹ năng</a>
+<!-- Active State: "Dự án" -->
+<a class="text-white font-serif italic relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-white hover:scale-105 transition-all duration-300" href="#">Dự án</a>
+<a class="text-slate-400 font-sans text-sm tracking-wide hover:text-white hover:scale-105 transition-all duration-300" href="#">Liên hệ</a>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-1.5 text-sm font-medium scale-95 duration-200 active:opacity-80 transition-all hover:shadow-[0_0_15px_rgba(198,198,199,0.3)]">
+                Xem CV
+            </button>
+</div>
+</nav>
+<main class="hero-gradient min-h-screen pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- HEADER SECTION -->
+<header class="text-center mb-32 space-y-6">
+<h1 class="text-5xl md:text-7xl font-headline font-bold tracking-tight text-white">
+                Dấu ấn &amp; <span class="italic font-serif font-normal">Công trình</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
+                Những giải pháp phần mềm và hệ thống phần cứng mình đã xây dựng và tối ưu.
+            </p>
+</header>
+<!-- FEATURED PROJECT (AIoT Smart Garden) -->
+<section class="mb-48">
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-12 items-center">
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative group aspect-[16/10] overflow-hidden rounded-lg bg-surface-container-low shadow-2xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Close-up of an ESP32 microcontroller board connected to green cables on a dark workbench with soft blue ambient cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfVmS7S-kjeJmD6WwZ35NqLF1oZJDrV7O0Zh3nzDwXK2d23JNoo3ht6zVMGDPIs0sXlO2FcHBUcudPzeIZgX3nODQzjVfuM6QSv-nlHHTaPTR-BAYPh42l1f3CTI2qeLQ5dIJ0lyf8Lp08u3anptAqie32IXIeaOFikpfRWkw30ZjKw9lY12bLjmhvtp5Pdu3gq4KK8Wx3h1Lah2s9saP59RLWXdac0aHafl50HuSD-zQnlE502rz1zDf8jOMxk6Cx9ae87gBAv7M9"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-[#001524] via-transparent to-transparent opacity-60"></div>
+</div>
+</div>
+<div class="lg:col-span-4 order-1 lg:order-2 space-y-8 pl-0 lg:pl-8">
+<div>
+<span class="text-xs uppercase tracking-[0.3em] text-secondary font-semibold">Hardware &amp; Web Integration</span>
+<h2 class="text-4xl md:text-5xl font-body font-normal mt-4 text-white leading-tight tracking-tight">AIoT Smart Garden</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 text-[10px] rounded-full border border-outline-variant/30 text-on-surface-variant font-medium tracking-wide">Next.js</span>
+<span class="px-4 py-1 text-[10px] rounded-full border border-outline-variant/30 text-on-surface-variant font-medium tracking-wide">ESP32</span>
+<span class="px-4 py-1 text-[10px] rounded-full border border-outline-variant/30 text-on-surface-variant font-medium tracking-wide">C++</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-base font-light">
+                        Hệ thống vườn thông minh tự động hóa toàn diện. Dự án tập trung giải quyết bài toán giao tiếp giữa vi điều khiển ESP32 và giao diện giám sát web (Next.js). Tối ưu hóa việc xử lý điện áp bằng adapter, đọc tín hiệu cảm biến và điều khiển hệ thống LED theo thời gian thực.
+                    </p>
+<div class="flex items-center gap-4 pt-4">
+<button class="bg-primary text-on-primary rounded-full px-8 py-3 text-sm font-semibold hover:shadow-[0_10px_20px_rgba(198,198,199,0.2)] transition-all active:scale-95">
+                            Xem Case Study
+                        </button>
+<button class="border border-outline-variant/50 text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-white/5 transition-all active:scale-95">
+                            Mã nguồn GitHub
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECONDARY PROJECTS (Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+<!-- Card 1 -->
+<article class="group space-y-8">
+<div class="aspect-video w-full rounded-lg overflow-hidden glass-card shadow-lg transition-all duration-500 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity duration-500" data-alt="Minimalist desktop UI design showing a clean e-commerce dashboard with soft typography and subtle glassmorphism effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwxpgIMlgivRalUV0sEQIrORtxHElfNMH3AsdtXTw7a3BZQW6-JzN5lTtAekIMYcC8omNIAwqgD0iakhHxL2cOmPc8KqyqtJCIUf0tDEHBd98HihgPQ7ruKSr8tpHzkwlFoc_nOujq5yrjsGZHedmFORg1-4-fPpKOjjU414mD-VWf3q98SdrvvbyE6a0_whjqpWRq3ij89TVJ2jo1iLNIIwigHsB736y4XYYewk1zNVupUFBRjIVt2bf29RmBNpKdJ3KGBN2nBZ8H"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-headline font-semibold text-white group-hover:text-primary transition-colors">E-Commerce Redesign</h3>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors cursor-pointer">arrow_outward</span>
+</div>
+<p class="text-slate-400 font-light leading-relaxed">
+                        Thiết kế lại luồng trải nghiệm người dùng (UX) và giao diện (UI) cho trang Profile và Shopping Cart.
+                    </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">UI/UX</span>
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Figma</span>
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Front-end</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group space-y-8">
+<div class="aspect-video w-full rounded-lg overflow-hidden glass-card shadow-lg transition-all duration-500 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity duration-500" data-alt="Abstract dark geometric shapes with deep navy and gray gradients, evoking a high-end cinematic technology vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaeNyQD7AM9vNqTZhV3taIoUI6MjRt5Ld42EFOagLlzDNaWjTz44YwhOjloFo8XVAR62TsQv0h9S8VLDQhLyFJx9WGrmFQzTy1XmoYGHuL1MXdepwUBam0WjvhsqXJ4q6kIo_nOEWn6wmK90qQ6ZBug_FVL0CpFYr2g0VxdvH0MFNp4_ao54Yr_RpOQeVWcooiarZRpw71Ob7cou5k8WAn2aUrVj5RcRn1kzijjkc_qL4sAIock2q6yemJzmBfeqjwcwmzOmtk6fwn"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-headline font-semibold text-white group-hover:text-primary transition-colors">Teichi Portfolio</h3>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors cursor-pointer">arrow_outward</span>
+</div>
+<p class="text-slate-400 font-light leading-relaxed">
+                        Xây dựng website cá nhân đậm chất điện ảnh, tối giản kết hợp với quy trình Vibe Code trên Antigravity IDE.
+                    </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Next.js</span>
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">React-Bootstrap</span>
+<span class="text-[10px] text-on-secondary-container bg-secondary-container/20 px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Antigravity</span>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-transparent w-full py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-12 border-t border-white/5">
+<div class="text-slate-500 font-sans text-xs uppercase tracking-[0.2em] mb-4 md:mb-0">
+            © 2024 Teichi Portfolio. All rights reserved.
+        </div>
+<div class="flex space-x-12">
+<a class="text-slate-500 font-sans text-xs uppercase tracking-[0.2em] hover:text-white transition-colors" href="#">GitHub</a>
+<a class="text-slate-500 font-sans text-xs uppercase tracking-[0.2em] hover:text-white transition-colors" href="#">LinkedIn</a>
+</div>
+</footer>
+</body></html>
