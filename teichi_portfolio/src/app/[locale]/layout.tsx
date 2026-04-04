@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Shippori_Mincho } from "next/font/google";
 import "@/style/globals.css";
+import ClockworkBackground from "@/components/motion/ClockworkBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,7 +30,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} ${shippori.variable} antialiased min-h-screen flex flex-col bg-background text-white`}>
+      <body className={`${inter.variable} ${shippori.variable} antialiased min-h-screen flex flex-col bg-background text-white relative`}>
+        <ClockworkBackground />
         {children}
       </body>
     </html>
