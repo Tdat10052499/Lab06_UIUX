@@ -1,34 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-}
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-  }
+  --color-vibe-dark: #07031C;
+  --color-vibe-deep: #160C3D;
+  --color-vibe-indigo: #504D9C;
+  --color-vibe-magenta: #5D2B7E;
+  --color-vibe-accent: #AA5DC6;
+  --color-vibe-cyan: #00E5FF;
+
+  --color-background: var(--color-vibe-dark);
+  --color-foreground: #f8fafc;
+
+  /* Aliases for compatibility */
+  --color-deep-dark: var(--color-vibe-dark);
+  --color-vibe-purple-dark: var(--color-vibe-deep);
+  --color-vibe-accent-bright: var(--color-vibe-accent);
+
+  --color-primary: #AA5DC6;
+  --color-primary-foreground: #ffffff;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
 
-@layer components {
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
-  }
+code, .font-mono {
+  font-family: var(--font-mono);
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@utility animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@utility skill-tag {
+  @apply font-mono px-3 py-1 bg-vibe-deep/40 border border-vibe-indigo/30 rounded-md text-sm text-vibe-accent backdrop-blur-sm transition-all hover:border-vibe-accent;
 }
 
 @keyframes fadeIn {
@@ -41,20 +55,20 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Custom Smooth Scrollbar */
+/* Custom Smooth Scrollbar with theme color */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #07031C;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
+  background: #160C3D;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #5D2B7E;
 }
